@@ -1,18 +1,319 @@
 <!DOCTYPE html>
-
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTC-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PLV Registrar Document Website</title>
+        <title>PLV Registrar</title>
+        <link rel="icon" type="image/png" href="./assets/img/PamantasanNgLungsodNgValenzuelaLogo.png">
+
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/normalize.css">
     </head>
 
     <body>
 
+        <div class="vector-bg">
+            <div class="wave light-blue-wave"></div>
+            <div class="wave white-bottom-wave"></div>
+        </div>
+
+        <div id="progress-bar">
+            <div class="wrapper">
+
+                <div class="progress-fill" id="water-fill"></div>
+                
+                <div class="bar step-1 active"> <!-- This is starting up welcome button-->
+                    <p>1</p>
+                    <p>Welcome</p>
+                </div>
+
+                <div class="bar step-2"> <!-- This is for logging in with student id-->
+                    <p>2</p>
+                    <p>Login</p>
+                </div>
+
+                <div class="bar step-3"> <!-- This is for choosing documents-->
+                    <p>3</p>
+                    <p>Documents</p>
+                </div>
+
+                <div class="bar step-4"> <!-- This is for transaction reciept-->
+                    <p>4</p>
+                    <p>Finalize</p>
+                </div>
+
+                <div class="bar step-5"> <!-- This is basically uhm api loading thingy-->
+                    <p>5</p>
+                    <p>Requesting..</p>
+                </div>
+
+                <div class="bar step-6">  <!-- This is after your transact - you can start again-->
+                    <p>6</p>
+                    <p>Success</p>
+                </div>
+            </div>
+
+            
+        </div>
+        <div id="welcome-page">
+            <div class="wrapper">
+                <div id="text">
+                    <h1>PLV REGISTRAR REQUESTER</h1>
+                    <p>Want to Request a Document?</p>
+                    <p>The PLV Registrar Requester is designed to streamline your academic
+                        document applications. This portal can be used to request Transcripts,
+                        Certifications, Dimplomas, and other related documents without needing
+                        to visit the campus for initial filing.
+                    </p>
+                </div>
+                <div id="req-btn">
+                    <p id="start-btn">Request a Document</p>
+                    <p id="home-status-btn">Show Document Status</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="login-page" class="hidden"> <!-- Step 2-->
+            <div class="wrapper">
+                <div class="plv-photo"> <!-- The plv photo on left side-->
+                    <img src="./assets/img/plv-side-login.png">
+                </div>
+
+                <div id="login-content"> <!-- The loginpage is on the right side-->
+                    <h1>Login with your Student ID</h1>
+                    <form method="post">
+                        <fieldset>
+                            <legend>Student Details</legend>
+                            <div class="forms">
+                                <label for="student-id">
+                                    <span>Student ID* :</span> 
+                                    <span id="login-error" class="hidden">Invalid ID or Birthdate</span>
+                                </label>
+                                <input type="text" id="student-id" name="student_id" min="6" max="6" placeholder="eg. 241234" required>
+                            </div> <div class="forms">
+                                <label for="birthdate">Birthdate* :</label>
+                                <input type="date" id="birthdate" name="student_birthdate" required>
+                            </div>
+
+                            <div class="form-action">
+                                <button type="button" id="login-btn">Login</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="request-page" class="hidden"> <!-- Step 3-->
+            <div class="wrapper">
+                <div class="plv-photo"> <!-- Photo on the right side-->
+                    <img src="./assets/img/plv-side-login.png">
+                </div>
+
+                <div id="request-content">
+                    <h1>Request Documents</h1>
+                    <form method="post">
+                        <fieldset>
+                            <legend>Required Details</legend>
+                            <div class="forms">
+                                <label for="student-email">Email Address* :</label>
+                                <input type="email" id="student-email" name="student_email" placeholder="eg. juancruz@gmail.com" required>
+                                <span class="helper-text">*Transaction receipts and status updates will be sent here.</span>
+                            </div>
+
+                            <div id="document-options">
+                                <div>
+                                    <label for="cor">Certificate of Registration</label>
+                                    <input type="checkbox" id="cor" name="plv-doc">
+                                </div>
+
+                                <div>
+                                    <label for="cor-ctc">Certificate of Registration - CTC</label>
+                                    <input type="checkbox" id="cor-ctc" name="plv-doc">
+                                </div>
+
+                                <div>
+                                    <label for="grd-crd">Grade Card</label>
+                                    <input type="checkbox" id="grd-card" name="plv-doc">
+                                </div>
+
+                                <div>
+                                    <label for="grd-crd-ctc">Grade Card - CTC</label>
+                                    <input type="checkbox" id="grd-card-ctc" name="plv-doc">
+                                </div>
+
+                                <div>
+                                    <label for="diploma">Diploma</label>
+                                    <input type="checkbox" id="diploma" name="plv-doc">
+                                </div>
+
+                                <div>
+                                    <label for="gd-moral">Good Moral</label>
+                                    <input type="checkbox" id="gd-moral" name="plv-doc">
+                                </div>
+
+                                <div>
+                                    <label for="tor">Transcript of Records</label>
+                                    <input type="checkbox" id="tor" name="plv-doc">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="add-notes">Additional Notes: </label>
+                                <textarea id="add-notes" name="add_notes" max="100" placeholder="Want to say other things?..."></textarea>
+                            </div>
+
+                            <div class="form-action">
+                                <button type="button" id="request-btn">Request Documents</button>
+                            </div>
+
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="trans-reciept" class="hidden">
+            <div class="wrapper"> <!-- This is for transaction reciept-->
+                <div id="lists">
+                    <!-- Java Script class must be "list"-->
+                </div>
+
+                <div id="total-price">
+                    <p>Total Amount Due</p>
+                    <h1>PHP 0.00</h1>
+                </div>
+
+                <div class="form-action">
+                    <button type="button" id="finalize-btn">Proceed to Payment</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="payment-sample" class="hidden">
+            <div class="wrapper">
+                <div id="infos">
+                    <div class="header">
+                        <h1>PLV Registrar</h1>
+                    </div>
+
+                    <div class="body">
+                        <p class="section-title">Pay With</p>
+                        <div class="gcash-info">
+                            <p class="wallet-name">GCASH</p>
+                            <p class="wallet-bal">Balance: PHP 1250.00</p> <!-- Gcash Balance-->
+                        </div>
+                    </div>
+                    
+                    <div class="final-info">
+                        <p class="section-title">You are about to pay</p>
+                        <div class="amount-row">
+                            <p>Amount</p>
+                            <p id="gateway-amount">PHP</p> <!-- Total Amount-->
+                        </div>
+                        
+                        <div class="amount-row total-row">
+                            <p><strong>Total</strong></p>
+                            <p><strong id="gateway-total">PHP 0.00</strong></p> <!--Total Amount-->
+                        </div>
+                    </div>
+
+                    <div class="payment">
+                        <p class="review-text">Please review to ensure that the details are correct before you proceed</p>
+                        <div class="payment-actions">
+                            <p id="cancel-payment">Cancel</p>
+                            <button type="button" id="pay-btn">Pay PHP 0.00</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="api-notifier" class="hidden"> <!-- This is for api thingy-->
+            <div class="wrapper">
+                <div class="spinner"></div>
+                <h2>Processing your request...</h2>
+                <p>Please wait while we secure your documents and notify the registrar.</p>
+            </div>
+        </div>
+
+        <div id="end-page" class="hidden"> <!-- The last Page-->
+            <div class="wrapper">
+                <div class="success-content">
+                    <div class="checkmark-circle">
+                        <div class="checkmark"></div>
+                    </div>
+                    <h1>Request Successful!</h1>
+                    <p>Your documents are being processed. A receipt has been sent to your email.</p>
+                </div>
+
+                <div id="end-btns"> 
+                    <button type="button" id="status-btn" class="final-action-btn">
+                        Check Request Status
+                    </button>
+                    
+                    <button type="button" id="home-btn" class="final-action-btn">
+                        Home
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="db-showcase" class="hidden"> 
+            <div class="wrapper relative-wrapper">
+                <button type="button" id="back-home-btn" class="top-back-btn">&larr; Back</button>
+                
+                <div id="status-content">
+                    <h1>Track Document Status</h1>
+                    <form method="get">
+                        <fieldset>
+                            <legend>Enter Request Details</legend>
+                            <div class="forms">
+                                <label for="ticket-search">Ticket Number*: </label>
+                                <input type="text" id="ticket-search" placeholder="eg. TKT-123456" required>
+                            </div>
+                            <div class="form-action">
+                                <button type="button" id="search-status-btn">Check Status</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="status-overlay" class="hidden">
+            <div class="overlay-wrapper">
+                <button type="button" class="close-overlay-btn" id="close-status-modal">&times;</button>
+                
+                <div id="status-success-modal" class="hidden">
+                    <h2>Ticket Found</h2>
+                    <div class="status-card">
+                        <p><strong>Student ID: </strong><span id="res-student-id"></span></p>
+                        <p><strong>Documents: </strong><span id="res-documents"></span></p>
+                        <p><strong>Status: </strong><span id="res-status-badge" class="badge"></span></p>
+                    </div>
+                    <div class="test-buttons">
+                        <p id="processing-btn"><strong>Processing</strong></p>
+                        <p id="completed-btn"><strong>Completed</strong></p>
+                    </div>
+                </div>
+
+                <div id="status-error-modal" class="hidden">
+                    <div class="error-circle">!</div>
+                    <h2>Not Found</h2>
+                    <p>We couldn't find a request matching that ticket number. Please check your spelling and try again.</p>
+                </div>
+            </div>
+        </div>
+
+        <button id="global-back-btn" class="hidden" aria-label="Go Back">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+        </button>
     </body>
 
-    <script src="js/app.js"></script>
-
+    <script src="javascript/app.js"></script>
 </html>
