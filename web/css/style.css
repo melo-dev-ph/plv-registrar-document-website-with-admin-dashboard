@@ -1,0 +1,97 @@
+:root {
+  --bg: #f9fafc;
+  --text: #1f2937;
+  --primary: #2563eb;
+  --surface: #ffffff;
+  --border: #d1d5db;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  width: min(1080px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.brand {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 0 2rem;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.hero p {
+  max-width: 680px;
+  margin: 1rem auto 2rem;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.95rem 1.8rem;
+  background: var(--primary);
+  color: white;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.features {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-bottom: 4rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: #6b7280;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | PLV Registrar</title>
+  <link rel="stylesheet" href="css/admin-style.css">
+</head>
+<body>
+  <div class="admin-page">
+    <header class="admin-header">
+      <div class="container">
+        <h1>Admin Dashboard</h1>
+        <nav>
+          <a href="index.html">Home</a>
+          <button id="logoutBtn" class="secondary-button">Logout</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container admin-main">
+      <section class="dashboard-panel">
+        <h2>Welcome, Administrator</h2>
+        <p>Use this page to review and manage document requests.</p>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="dashboard-card">
+          <h3>Pending Requests</h3>
+          <p>Check and approve incoming document requests.</p>
+        </article>
+        <article class="dashboard-card">
+          <h3>Approved Documents</h3>
+          <p>Track which documents have been released to students.</p>
+        </article>
+        <article class="dashboard-card">
+          <h3>Reports</h3>
+          <p>View activity and keep records for your office.</p>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
