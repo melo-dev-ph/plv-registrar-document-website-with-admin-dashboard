@@ -31,10 +31,6 @@
                         <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                         Students
                     </p>
-                    <p id="reports-btn">
-                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-                        Reports
-                    </p>
                     <p id="settings-btn">
                         <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
                         Settings
@@ -91,7 +87,7 @@
                     <div class="request header">
                         <div class="search-bar">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                            <input type="search" id="request-search" placeholder="Student ID">
+                            <input type="search" id="request-search" placeholder="Search by Student ID or Name...">
                         </div>
                         
                         <div class="header-actions">
@@ -150,9 +146,299 @@
                 </div>
             </div>
 
-            <div id="students" class="hidden"></div>
-            <div id="reports" class="hidden"></div>
-            <div id="settings" class="hidden"></div>
+            <div id="students" class="hidden">
+                <div class="students wrapper">
+                    <div class="students header">
+                        <div class="search-bar">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                            <input type="search" id="students-search" placeholder="Search by Student ID or Name...">
+                        </div>
+                        
+                        <div class="header-actions">
+                            <div class="icon-btn filter-btn" title="Filter">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                            </div>
+                            <div class="icon-btn export-btn" title="Export">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="students body">
+                        <div class="student-record" data-id="243001">
+                            <p class="student-id">243001</p>
+                            <p class="section">BSIT 2-8</p>
+                            <p class="name">John Carl</p>
+                            <button class="action-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 8 8 9"></polyline></svg>
+                            </button>
+                        </div>
+
+                        <div class="student-record" data-id="243002">
+                            <p class="student-id">243002</p>
+                            <p class="section">BACC 2-2</p>
+                            <p class="name">Maria Clara</p>
+                            <button class="action-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 8 8 9"></polyline></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="settings" class="hidden">
+                <div class="settings wrapper">
+                    <div class="settings-card">
+                        <div class="card-info">
+                            <h2>Maintenance Mode</h2>
+                            <p>Temporarily disable student access to the portal for system updates.</p>
+                        </div>
+
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="maintenance-toggle">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="settings-card">
+                        <div class="card-info">
+                            <h2>Document Price Configuration</h2>
+                            <p>Update the issuance fees for transcripts, diplomas, and other registrar documents.</p>
+                        </div>
+                        <button id="config-price-btn" class="action-btn-primary">Configure Prices</button>
+                    </div>
+
+                    <div class="settings-card logout-card">
+                        <div class="card-info">
+                            <h2>Account Session</h2>
+                            <p>Securely end your current administrative session.</p>
+                        </div>
+                        <button id="logout-btn" class="action-btn-outline">Log Out</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Overlays for the panels-->
+
+            <div id="urgent-overlay" class="req-overlay">
+                <div class="request-modal">
+                    <button class="close-req-btn" title="Close">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+
+                    <div class="rm-left">
+                        <div class="rm-status"><div class="circle" style="background: #FF3B30;"></div> Urgent</div>
+                        <h1 class="rm-id">STUDENT ID</h1>
+                        <div class="rm-profile-group">
+                            <div class="rm-photo-placeholder"></div>
+                            <div>
+                                <p class="rm-name">Dela Cruz, Juan O.</p>
+                                <p class="rm-section">BSIT 2-8</p>
+                            </div>
+                        </div>
+                        <div class="rm-docs-box">
+                            <h3>Documents Requested</h3>
+                            <ul><li>TOR</li><li>COR</li><li>Diploma</li></ul>
+                        </div>
+                    </div>
+                    <div class="rm-right">
+                        <div class="rm-checkboxes">
+                            <label><input type="checkbox"> TOR</label>
+                            <label><input type="checkbox"> COR</label>
+                            <label><input type="checkbox"> Diploma</label>
+                            <label><input type="checkbox"> CTC</label>
+                        </div>
+                        <div class="rm-working-days">
+                            <label>Within <input type="number" min="1" value="3"> Days</label>
+                        </div>
+                        <textarea placeholder="You can now get your document. Processing..."></textarea>
+                        <button class="action-btn-primary">Send</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="new-overlay" class="req-overlay">
+               <div class="request-modal">
+                    <button class="close-req-btn" title="Close">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+
+                    <div class="rm-left">
+                        <div class="rm-status"><div class="circle" style="background: #007AFF;"></div> New</div>
+                        <h1 class="rm-id">STUDENT ID</h1>
+                        <div class="rm-profile-group">
+                            <div class="rm-photo-placeholder"></div>
+                            <div>
+                                <p class="rm-name">Dela Cruz, Juan O.</p>
+                                <p class="rm-section">BSIT 2-8</p>
+                            </div>
+                        </div>
+                        <div class="rm-docs-box">
+                            <h3>Documents Requested</h3>
+                            <ul><li>TOR</li><li>COR</li><li>Diploma</li></ul>
+                        </div>
+                    </div>
+                    <div class="rm-right">
+                        <div class="rm-checkboxes">
+                            <label><input type="checkbox"> TOR</label>
+                            <label><input type="checkbox"> COR</label>
+                            <label><input type="checkbox"> Diploma</label>
+                            <label><input type="checkbox"> CTC</label>
+                        </div>
+                        <div class="rm-working-days">
+                            <label>Within <input type="number" min="1" value="5"> Days</label>
+                        </div>
+                        <textarea placeholder="You can now get your document. Processing..."></textarea>
+                        <button class="action-btn-primary">Send</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="inprocess-overlay" class="req-overlay">
+                <div class="request-modal">
+                    <button class="close-req-btn" title="Close">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+
+                    <div class="rm-left">
+                        <div class="rm-status"><div class="circle" style="background: #FF9500;"></div> In Process</div>
+                        <h1 class="rm-id">STUDENT ID</h1>
+                        <div class="rm-profile-group">
+                            <div class="rm-photo-placeholder"></div>
+                            <div>
+                                <p class="rm-name">Dela Cruz, Juan O.</p>
+                                <p class="rm-section">BSIT 2-8</p>
+                            </div>
+                        </div>
+                        <div class="rm-docs-box">
+                            <h3>Documents Requested</h3>
+                            <ul><li>TOR</li><li>COR</li><li>Diploma</li></ul>
+                        </div>
+                    </div>
+                    <div class="rm-right">
+                        <div class="rm-checkboxes">
+                            <label><input type="checkbox" checked> TOR</label>
+                            <label><input type="checkbox" checked> COR</label>
+                            <label><input type="checkbox"> Diploma</label>
+                            <label><input type="checkbox"> CTC</label>
+                        </div>
+                        <textarea placeholder="Your document is ready for pickup..."></textarea>
+                        <button class="action-btn-primary">Mark as Completed</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="completed-overlay" class="req-overlay">
+                <div class="request-modal">
+                    <button class="close-req-btn" title="Close">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+
+                    <div class="rm-left">
+                        <div class="rm-status"><div class="circle" style="background: #34C759;"></div> Completed</div>
+                        <h1 class="rm-id">STUDENT ID</h1>
+                        <div class="rm-profile-group">
+                            <div class="rm-photo-placeholder"></div>
+                            <div>
+                                <p class="rm-name">Dela Cruz, Juan O.</p>
+                                <p class="rm-section">BSIT 2-8</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rm-right" style="justify-content: center;">
+                        <div class="rm-sent-status" style="height: 100%;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            <p>Documents Sent & Closed</p>
+                            
+                            <div class="sent-docs-list">
+                                <p><strong>Sent:</strong> TOR, COR</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+            <div id="student-overlay" class="req-overlay">
+                <div class="request-modal">
+                    <button class="close-req-btn" title="Close">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+
+                    <div class="rm-left">
+                        <div class="rm-status"><div class="circle" style="background: var(--Periwinkle-Gray);"></div> Student Record</div>
+                        <h1 class="rm-id">STUDENT ID</h1>
+                        <div class="rm-profile-group">
+                            <div class="rm-photo-placeholder"></div>
+                            <div>
+                                <p class="rm-name">Student Name</p>
+                                <p class="rm-section">Section</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="rm-right">
+                        <h3 class="pending-header">Current Pending Requests</h3>
+                        
+                        <div class="pending-requests-list">
+                            <div class="pending-item">
+                                <span class="doc-name">Transcript of Records (TOR)</span>
+                                <span class="doc-status" style="color: #FF9500;">In Process</span>
+                            </div>
+                            <div class="pending-item">
+                                <span class="doc-name">Good Moral Certificate</span>
+                                <span class="doc-status" style="color: #007AFF;">New</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="price-config-overlay" class="modal-overlay">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Configure Prices (PHP)</h2>
+                        <button class="close-modal-icon" title="Close">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group">
+                            <label>Transcript of Records (TOR)</label>
+                            <input type="number" value="150" min="0" step="10">
+                        </div>
+
+                        <div class="input-group">
+                            <label>Transcript of Records (TOR) - CTC</label>
+                            <input type="number" value="150" min="0" step="10">
+                        </div>
+
+                        <div class="input-group">
+                            <label>Certificate of Registration (COR)</label>
+                            <input type="number" value="150" min="0" step="10">
+                        </div>
+
+                        <div class="input-group">
+                            <label>Certificate of Registration (COR) - CTC</label>
+                            <input type="number" value="150" min="0" step="10">
+                        </div>
+
+                        <div class="input-group">
+                            <label>Good Moral Certificate</label>
+                            <input type="number" value="50" min="0" step="10">
+                        </div>
+                        <div class="input-group">
+                            <label>Form 137</label>
+                            <input type="number" value="100" min="0" step="10">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="action-btn-outline close-modal-btn">Cancel</button>
+                        <button class="action-btn-primary">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
 
