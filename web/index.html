@@ -17,6 +17,16 @@
             <div class="wave white-bottom-wave"></div>
         </div>
 
+        <div id="maintenance-page" class="hidden">
+            <div class="wrapper maintenance-wrapper">
+                <div class="maintenance-circle">
+                    <svg viewBox="0 0 24 24" width="40" height="40" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                </div>
+                <h1>Under Maintenance</h1>
+                <p>We are currently updating the PLV Registrar portal. Please check back later.</p>
+            </div>
+        </div>
+
         <div id="progress-bar">
             <div class="wrapper">
 
@@ -293,10 +303,6 @@
                         <p><strong>Documents: </strong><span id="res-documents"></span></p>
                         <p><strong>Status: </strong><span id="res-status-badge" class="badge"></span></p>
                     </div>
-                    <div class="test-buttons">
-                        <p id="processing-btn"><strong>Processing</strong></p>
-                        <p id="completed-btn"><strong>Completed</strong></p>
-                    </div>
                 </div>
 
                 <div id="status-error-modal" class="hidden">
@@ -313,7 +319,10 @@
                 <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
         </button>
+
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <script src="js/app.js"></script>
     </body>
 
-    <script src="javascript/app.js"></script>
+    
 </html>

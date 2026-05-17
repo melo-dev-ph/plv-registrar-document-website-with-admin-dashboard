@@ -41,7 +41,7 @@
 
         <div id="main-header">
             <div class="main-header wrapper">
-                <h1>Overview</h1> <!--Can be changed kung anong section ang gamit-->
+                <h1>Overview</h1> 
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
                     <path d="M 25 0 C 22.792969 0 21 1.792969 21 4 C 21 6.207031 22.792969 8 25 8 C 27.207031 8 29 6.207031 29 4 C 29 1.792969 27.207031 0 25 0 Z M 19.375 6.09375 C 14.804688 8.050781 12 12.457031 12 18 C 12 29 8.199219 31.761719 5.9375 33.40625 C 4.933594 34.132813 4 34.808594 4 36 C 4 40.207031 10.28125 42 25 42 C 39.71875 42 46 40.207031 46 36 C 46 34.808594 45.066406 34.132813 44.0625 33.40625 C 41.800781 31.761719 38 29 38 18 C 38 12.441406 35.199219 8.046875 30.625 6.09375 C 29.769531 8.367188 27.566406 10 25 10 C 22.433594 10 20.230469 8.363281 19.375 6.09375 Z M 19 43.875 C 19 43.914063 19 43.960938 19 44 C 19 47.308594 21.691406 50 25 50 C 28.308594 50 31 47.308594 31 44 C 31 43.960938 31 43.914063 31 43.875 C 29.117188 43.953125 27.117188 44 25 44 C 22.882813 44 20.882813 43.953125 19 43.875 Z"></path>
@@ -52,17 +52,15 @@
         </div>
 
         <div id="body">
-            <!--We will put elements here-->
             <div id="overview">
                 <div class="overview wrapper">
-                    <div class="cards urgent"> <!--Request older than 3 days-->
+                    <div class="cards urgent">
                         <h1>Urgent</h1>
                         <p><strong>0</strong>Requests</p>
                         <div class="circle"></div>
-
                     </div>
 
-                    <div class="cards new"> <!-- New requests-->
+                    <div class="cards new">
                         <h1>New</h1>
                         <p><strong>0</strong>Requests</p>
                         <div class="circle"></div>
@@ -100,49 +98,7 @@
                         </div>
                     </div>
 
-                    <div class="request body">
-                        
-                        <div class="student-req urgent" data-id="243001">
-                            <div class="circle"></div>
-                            <p class="student-id">243001</p>
-                            <p class="section">BSIT 2-8</p>
-                            <p class="name">John Carl</p>
-                            <button class="action-btn">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 8 8 9"></polyline></svg>
-                            </button>
-                        </div>
-
-                        <div class="student-req new" data-id="243002">
-                            <div class="circle"></div>
-                            <p class="student-id">243002</p>
-                            <p class="section">BACC 2-2</p>
-                            <p class="name">Maria Clara</p>
-                            <button class="action-btn">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 8 8 9"></polyline></svg>
-                            </button>
-                        </div>
-
-                        <div class="student-req in-process" data-id="243003">
-                            <div class="circle"></div>
-                            <p class="student-id">243003</p>
-                            <p class="section">BSEE 5-5</p>
-                            <p class="name">Juan Dela Cruz</p>
-                            <button class="action-btn">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 8 8 9"></polyline></svg>
-                            </button>
-                        </div>
-
-                        <div class="student-req completed" data-id="243004">
-                            <div class="circle"></div>
-                            <p class="student-id">243003</p>
-                            <p class="section">BAC 2-3</p>
-                            <p class="name">Crim</p>
-                            <button class="action-btn">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 8 8 9"></polyline></svg>
-                            </button>
-                        </div>
-                        
-                    </div>
+                    <div class="request body"></div> 
                 </div>
             </div>
 
@@ -155,34 +111,20 @@
                         </div>
                         
                         <div class="header-actions">
+                            <div class="icon-btn add-student-btn" id="open-add-student-btn" title="Add New Student">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+                            </div>
                             <div class="icon-btn filter-btn" title="Filter">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
                             </div>
                             <div class="icon-btn export-btn" title="Export">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                             </div>
+                            
                         </div>
                     </div>
 
-                    <div class="students body">
-                        <div class="student-record" data-id="243001">
-                            <p class="student-id">243001</p>
-                            <p class="section">BSIT 2-8</p>
-                            <p class="name">John Carl</p>
-                            <button class="action-btn">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 8 8 9"></polyline></svg>
-                            </button>
-                        </div>
-
-                        <div class="student-record" data-id="243002">
-                            <p class="student-id">243002</p>
-                            <p class="section">BACC 2-2</p>
-                            <p class="name">Maria Clara</p>
-                            <button class="action-btn">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 8 8 9"></polyline></svg>
-                            </button>
-                        </div>
-                    </div>
+                    <div class="students body"></div> 
                 </div>
             </div>
 
@@ -219,8 +161,6 @@
                 </div>
             </div>
 
-            <!-- Overlays for the panels-->
-
             <div id="urgent-overlay" class="req-overlay">
                 <div class="request-modal">
                     <button class="close-req-btn" title="Close">
@@ -229,26 +169,22 @@
 
                     <div class="rm-left">
                         <div class="rm-status"><div class="circle" style="background: #FF3B30;"></div> Urgent</div>
-                        <h1 class="rm-id">STUDENT ID</h1>
+                        <h1 class="rm-id">ID</h1>
                         <div class="rm-profile-group">
                             <div class="rm-photo-placeholder"></div>
                             <div>
-                                <p class="rm-name">Dela Cruz, Juan O.</p>
-                                <p class="rm-section">BSIT 2-8</p>
+                                <p class="rm-name">Name</p>
+                                <p class="rm-section">Section</p>
                             </div>
                         </div>
                         <div class="rm-docs-box">
                             <h3>Documents Requested</h3>
-                            <ul><li>TOR</li><li>COR</li><li>Diploma</li></ul>
+                            <ul></ul>
                         </div>
                     </div>
                     <div class="rm-right">
                         <div class="rm-checkboxes">
-                            <label><input type="checkbox"> TOR</label>
-                            <label><input type="checkbox"> COR</label>
-                            <label><input type="checkbox"> Diploma</label>
-                            <label><input type="checkbox"> CTC</label>
-                        </div>
+                            </div>
                         <div class="rm-working-days">
                             <label>Within <input type="number" min="1" value="3"> Days</label>
                         </div>
@@ -266,26 +202,22 @@
 
                     <div class="rm-left">
                         <div class="rm-status"><div class="circle" style="background: #007AFF;"></div> New</div>
-                        <h1 class="rm-id">STUDENT ID</h1>
+                        <h1 class="rm-id">ID</h1>
                         <div class="rm-profile-group">
                             <div class="rm-photo-placeholder"></div>
                             <div>
-                                <p class="rm-name">Dela Cruz, Juan O.</p>
-                                <p class="rm-section">BSIT 2-8</p>
+                                <p class="rm-name">Name</p>
+                                <p class="rm-section">Section</p>
                             </div>
                         </div>
                         <div class="rm-docs-box">
                             <h3>Documents Requested</h3>
-                            <ul><li>TOR</li><li>COR</li><li>Diploma</li></ul>
+                            <ul></ul>
                         </div>
                     </div>
                     <div class="rm-right">
                         <div class="rm-checkboxes">
-                            <label><input type="checkbox"> TOR</label>
-                            <label><input type="checkbox"> COR</label>
-                            <label><input type="checkbox"> Diploma</label>
-                            <label><input type="checkbox"> CTC</label>
-                        </div>
+                            </div>
                         <div class="rm-working-days">
                             <label>Within <input type="number" min="1" value="5"> Days</label>
                         </div>
@@ -303,26 +235,22 @@
 
                     <div class="rm-left">
                         <div class="rm-status"><div class="circle" style="background: #FF9500;"></div> In Process</div>
-                        <h1 class="rm-id">STUDENT ID</h1>
+                        <h1 class="rm-id">ID</h1>
                         <div class="rm-profile-group">
                             <div class="rm-photo-placeholder"></div>
                             <div>
-                                <p class="rm-name">Dela Cruz, Juan O.</p>
-                                <p class="rm-section">BSIT 2-8</p>
+                                <p class="rm-name">Name</p>
+                                <p class="rm-section">Section</p>
                             </div>
                         </div>
                         <div class="rm-docs-box">
                             <h3>Documents Requested</h3>
-                            <ul><li>TOR</li><li>COR</li><li>Diploma</li></ul>
+                            <ul></ul>
                         </div>
                     </div>
                     <div class="rm-right">
                         <div class="rm-checkboxes">
-                            <label><input type="checkbox" checked> TOR</label>
-                            <label><input type="checkbox" checked> COR</label>
-                            <label><input type="checkbox"> Diploma</label>
-                            <label><input type="checkbox"> CTC</label>
-                        </div>
+                             </div>
                         <textarea placeholder="Your document is ready for pickup..."></textarea>
                         <button class="action-btn-primary">Mark as Completed</button>
                     </div>
@@ -337,12 +265,12 @@
 
                     <div class="rm-left">
                         <div class="rm-status"><div class="circle" style="background: #34C759;"></div> Completed</div>
-                        <h1 class="rm-id">STUDENT ID</h1>
+                        <h1 class="rm-id">ID</h1>
                         <div class="rm-profile-group">
                             <div class="rm-photo-placeholder"></div>
                             <div>
-                                <p class="rm-name">Dela Cruz, Juan O.</p>
-                                <p class="rm-section">BSIT 2-8</p>
+                                <p class="rm-name">Name</p>
+                                <p class="rm-section">Section</p>
                             </div>
                         </div>
                     </div>
@@ -352,7 +280,7 @@
                             <p>Documents Sent & Closed</p>
                             
                             <div class="sent-docs-list">
-                                <p><strong>Sent:</strong> TOR, COR</p>
+                                <p></p>
                             </div>
                         </div>
                     </div>
@@ -367,11 +295,11 @@
 
                     <div class="rm-left">
                         <div class="rm-status"><div class="circle" style="background: var(--Periwinkle-Gray);"></div> Student Record</div>
-                        <h1 class="rm-id">STUDENT ID</h1>
+                        <h1 class="rm-id">ID</h1>
                         <div class="rm-profile-group">
                             <div class="rm-photo-placeholder"></div>
                             <div>
-                                <p class="rm-name">Student Name</p>
+                                <p class="rm-name">Name</p>
                                 <p class="rm-section">Section</p>
                             </div>
                         </div>
@@ -381,14 +309,7 @@
                         <h3 class="pending-header">Current Pending Requests</h3>
                         
                         <div class="pending-requests-list">
-                            <div class="pending-item">
-                                <span class="doc-name">Transcript of Records (TOR)</span>
-                                <span class="doc-status" style="color: #FF9500;">In Process</span>
-                            </div>
-                            <div class="pending-item">
-                                <span class="doc-name">Good Moral Certificate</span>
-                                <span class="doc-status" style="color: #007AFF;">New</span>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>
@@ -402,47 +323,57 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                         </button>
                     </div>
-                    <div class="modal-body">
-                        <div class="input-group">
-                            <label>Transcript of Records (TOR)</label>
-                            <input type="number" value="150" min="0" step="10">
-                        </div>
-
-                        <div class="input-group">
-                            <label>Transcript of Records (TOR) - CTC</label>
-                            <input type="number" value="150" min="0" step="10">
-                        </div>
-
-                        <div class="input-group">
-                            <label>Certificate of Registration (COR)</label>
-                            <input type="number" value="150" min="0" step="10">
-                        </div>
-
-                        <div class="input-group">
-                            <label>Certificate of Registration (COR) - CTC</label>
-                            <input type="number" value="150" min="0" step="10">
-                        </div>
-
-                        <div class="input-group">
-                            <label>Good Moral Certificate</label>
-                            <input type="number" value="50" min="0" step="10">
-                        </div>
-                        <div class="input-group">
-                            <label>Form 137</label>
-                            <input type="number" value="100" min="0" step="10">
-                        </div>
+                    
+                    <div class="modal-body" id="price-config-list">
                     </div>
+                    
                     <div class="modal-footer">
                         <button class="action-btn-outline close-modal-btn">Cancel</button>
-                        <button class="action-btn-primary">Save Changes</button>
+                        <button class="action-btn-primary" id="save-prices-btn">Save Changes</button>
                     </div>
                 </div>
             </div>
 
+            <div id="add-student-overlay" class="modal-overlay">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Add New Student Record</h2>
+                        <button class="close-modal-icon" id="close-add-student-icon" title="Close">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="input-group">
+                            <label>Student ID*</label>
+                            <input type="text" id="new-student-id" placeholder="e.g., 241234" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Full Name*</label>
+                            <input type="text" id="new-student-name" placeholder="e.g., Juan Dela Cruz" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Birthdate* (Required for Student Login Portal)</label>
+                            <input type="date" id="new-student-bday" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Section / Course</label>
+                            <input type="text" id="new-student-section" placeholder="e.g., BSIT 2-A">
+                        </div>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button class="action-btn-outline" id="close-add-student-btn">Cancel</button>
+                        <button class="action-btn-primary" id="save-student-btn">Add Student</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
-
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
         <script src="js/admin.js"></script>
     </body>
-    
 </html>
